@@ -16,8 +16,10 @@ jobs:
     - name: Determine if input is Aditya
       id: check_name
       run: |
-        if [ "${{ github.event.inputs.name }}" == "Aditya" ]; then
-          echo "True"
-        else
-          echo "False"
+        if [ "${{ github.event.inputs.name }}" == "Prod" ]; then
+          echo $ENV_1
+        if [ "${{ github.event.inputs.name }}" == "QA" ]; then
+          echo $ENV_2
+        else; then
+          echo "NO env available"
         fi
