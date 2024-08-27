@@ -1,4 +1,4 @@
-name: 020-manual-input-workflow
+name: Workflow_test
 
 on:
   workflow_dispatch:
@@ -21,6 +21,3 @@ jobs:
         else
           echo "False"
         fi
-
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
