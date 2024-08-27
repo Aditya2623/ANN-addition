@@ -19,7 +19,7 @@ jobs:
         if [ "${{ github.event.inputs.name }}" == "Prod" ]; then
           echo "Value of ENV_1:${{ secrets.ENV_1 }}"
         elif [ "${{ github.event.inputs.name }}" == "QA" ]; then
-          echo "Value of ENV_2: "
+          echo "Value of ENV_2: ${{ secrets.ENV_2 }}"
         else
           echo "NO env available"
         fi
