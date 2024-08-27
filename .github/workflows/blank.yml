@@ -17,9 +17,9 @@ jobs:
       id: check_name
       run: |
         if [ "${{ github.event.inputs.name }}" == "Prod" ]; then
-          echo $ENV_1
+          echo "Value of ENV_1: $ENV_1"
         elif [ "${{ github.event.inputs.name }}" == "QA" ]; then
-          echo $ENV_2
-        else; then
+          echo "Value of ENV_2: $ENV_2"
+        else
           echo "NO env available"
         fi
