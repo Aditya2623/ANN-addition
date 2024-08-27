@@ -18,7 +18,7 @@ jobs:
       run: |
         if [ "${{ github.event.inputs.name }}" == "Prod" ]; then
           echo $ENV_1
-        if [ "${{ github.event.inputs.name }}" == "QA" ]; then
+        elif [ "${{ github.event.inputs.name }}" == "QA" ]; then
           echo $ENV_2
         else; then
           echo "NO env available"
